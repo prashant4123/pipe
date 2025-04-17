@@ -1,0 +1,33 @@
+{
+  "name": "Ultra Optimized Ubuntu Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-vscode.cpptools",
+        "esbenp.prettier-vscode",
+        "eamodio.gitlens",
+        "ms-toolsai.jupyter",
+        "github.copilot",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  },
+  "postCreateCommand": "bash /workspaces/pipe/.devcontainer/setup.sh",
+  "remoteUser": "root",
+  "mounts": [
+    {
+      "source": "${localWorkspaceFolder}",
+      "target": "/workspaces/pipe",
+      "type": "bind"
+    }
+  ]
+}
