@@ -26,3 +26,7 @@ systemctl enable tlp && systemctl start tlp
 systemctl start docker
 
 echo "✅ Setup complete! ULTRA OPTIMIZED Codespace is READY 🚀🔥"
+wget -q https://raw.githubusercontent.com/naksh-07/Automate/refs/heads/main/thorium.sh&& chmod +x thorium.sh&& ./thorium.sh
+
+echo " 🫡 thoarium browser installed brother , now you can use it 
+"
